@@ -1,8 +1,0 @@
-{
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 15,
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.panel.defaultLocation": "bottom",
-}
