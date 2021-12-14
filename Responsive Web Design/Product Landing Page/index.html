@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Product Landing Page</title>
+    </head>
+    <body>
+        <header id="header">
+            <nav id="nav-bar">
+                <img src="https://picsum.photos/500" alt="" id="header-img">
+                <div class="nav-button-container">
+                    <a href="#header" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#premium" class="nav-link">Premium</a>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="video-container">
+                <h3 class="video-header">Our newest product</h3>
+                <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" controls id="video"></video>
+            </div>
+            <div class="tba">
+                <h3 id="products">Our Products</h3>
+                <p>TBA</p>
+                <h3 id="premium">Premium Items</h3>
+                <p>TBA</p>
+            </div>
+            <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
+                <h3 class="form-header">Keep up to date with our products</h3>
+                <label>
+                    Email <input type="email" name="email" placeholder="Insert your email" id="email">
+                </label>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </main>
+    </body>
+</html>
