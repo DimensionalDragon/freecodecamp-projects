@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Product Landing Page</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>
+                Javascript Array Functions
+            </header>
+            <a href="#Push" class="nav-link">Push</a>
+            <a href="#Pop" class="nav-link">Pop</a>
+            <a href="#Filter" class="nav-link">Filter</a>
+            <a href="#Map" class="nav-link">Map</a>
+            <a href="#Reduce" class="nav-link">Reduce</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Push">
+                <header>Push</header>
+                <code>arr.push(value)</code>
+                <p>Used to insert an element to the back of an array</p>
+                <p>This method will not create a new array and will change the existing array</p>
+                <p>Parameters used:</p>
+                <ul>
+                    <li>value: the value/element to be inserted</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Pop">
+                <header>Pop</header>
+                <code>arr.pop()</code>
+                <p>Used to remove the last element of an array</p>
+                <p>This method will not create a new array and will change the existing array</p>
+            </section>
+            <section class="main-section" id="Filter">
+                <header>Filter</header>
+                <code>arr.filter(function(element, index, array))</code>
+                <p>Used to filter elements on an array based on certain criteria</p>
+                <p>Every element will be checked using a function, elements that returns false will be deleted</p>
+                <p>This method will return the filtered array, so be sure to store it in a variable</p>
+                <p>Parameters used:</p>
+                <ul>
+                    <li>element: represents each element in an array, will be used inside the filter function</li>
+                    <li>index (optional): represents the index of the element, use this in case you would like to use the index in the filter function</li>
+                    <li>array (optional): represents the whole array, use this in case you would like to use the array in the filter function</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Map">
+                <header>Map</header>
+                <code>arr.map(function(element, index, array))</code>
+                <p>Used to map each element of an array to different type/value</p>
+                <p>Every element will be mapped using a function, elements will be mapped to the return value of that function</p>
+                <p>This method will return the mapped array, so be sure to store it in a variable</p>
+                <p>Parameters used:</p>
+                <ul>
+                    <li>element: represents each element in an array, will be used inside the mapping function</li>
+                    <li>index (optional): represents the index of the element, use this in case you would like to use the index in the mapping function</li>
+                    <li>array (optional): represents the whole array, use this in case you would like to use the array in the mapping function</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Reduce">
+                <header>Reduce</header>
+                <code>arr.reduce(function(accumulator, element, index, array), initial)</code>
+                <p>Used to reduce an array to 1 element</p>
+                <p>Usually implemented in finding sum, average, and other collective operations</p>
+                <p>This method will return the final value, so be sure to store it in a variable</p>
+                <p>Parameters used:</p>
+                <ul>
+                    <li>accumulator: A variable that will accumulate operations for every element</li>
+                    <li>element: represents each element in an array, will be used inside the accumulating function</li>
+                    <li>index (optional): represents the index of the element, use this in case you would like to use the index in the accumulating function</li>
+                    <li>array (optional): represents the whole array, use this in case you would like to use the array in the accumulating function</li>
+                    <li>initial (optional): sets a default value for accumulator, defaults to the first value of array if not specified</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
