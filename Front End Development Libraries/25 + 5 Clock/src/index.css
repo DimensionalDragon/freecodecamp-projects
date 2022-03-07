@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.body-container {
+    background-color: #351F39;
+    height: 90vh;
+    user-select: none;
+}
+
+#clock {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    user-select: none;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+.setters-container {
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 35%;
+    padding: 0.25rem;
+}
+
+.setter-container {
+    background-color: #351F39;
+    width: 45%;
+    height: 55%;
+    border-radius: 10px;
+}
+
+.setter-label {
+    font-weight: bold;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.inc, .dec {
+    width: 13%;
+    height: 100%;
+    background-color: #726A95;
+}
+
+.inc {
+    border-radius: 0 10px 10px 0;
+}
+
+.dec {
+    border-radius: 10px 0 0 10px;
+}
+
+.inc:hover, .dec:hover {
+    background-color: #958db9;
+}
+
+.screen-clock {
+    font-family: 'Digitalism', sans-serif;
+    font-size: 5rem;
+}
+
+.control-container {
+    height: 20%;
+}
+
+.footer {
+    height: 5vh;
+}
+
+.profile-link {
+    margin-inline: 10px;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    animation: hover-down 0.2s ease-in-out forwards;
+}
+
+@keyframes hover-down {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 10%);
+    }
+}
+
+.profile-link img {
+    width: 1em;
+    margin-inline: 5px;
+}
+
+.bg-black {
+    background-color: black;
+}

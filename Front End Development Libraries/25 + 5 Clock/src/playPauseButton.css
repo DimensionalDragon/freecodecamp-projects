@@ -1,0 +1,129 @@
+.playpause-container {
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin-left: 0;
+}
+
+.playpause-button {
+    position: relative;
+    /* the button's background color */
+    background: black; 
+    border: none;
+    outline:none;
+    height: 100%;
+    aspect-ratio: 1/1;
+    font-size: 2em; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+    cursor:pointer;
+    /* the button's a circle */ 
+    -moz-border-radius: 5em;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+
+}
+
+.playpause-button:focus {
+    outline:none;
+}
+
+/* the button's top layer: size, shape, appearance */
+.playpause-button:before {
+    content: "";
+    position: absolute;
+    top: 0.30em;
+    /* for visual centering */
+    left: 0.40em;
+    height: 0;
+    border-style: solid;
+    border-width: 0.4em 0 0.4em 0.8em;
+    /* create shape with color */
+    border-color: transparent transparent transparent white; 
+    transition: .218s ease;
+}
+
+.playpause-button.paused:before {
+    height: 0.8em;
+    border-width: 0 0 0 0.6em;
+}
+
+/* the button's mouseover/click/hover layer: size, shape, appearance */
+.playpause-button:after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    width: 0;
+    height: 0.8em;
+    top: 0.3em;
+    /* for visual centering */
+    left: 0.6em;
+    transition: .218s ease;
+}
+
+.playpause-button.paused:after {
+    width: .2em;
+}
+
+@media(max-width: 445px) {
+    .playpause-button:before {
+        border-width: 0.3em 0 0.3em 0.6em;
+        top: 0.35em;
+    }
+    .playpause-button.paused:before {
+        height: 0.6em;
+        border-width: 0 0 0 0.6em;
+        left: 0.35em;
+    }
+    /* the button's mouseover/click/hover layer: size, shape, appearance */
+    .playpause-button:after {
+        left: 0.58em;
+        transition: .218s ease;
+    }
+    .playpause-button.paused:after {
+        width: .15em;
+    }
+}
+
+@media(max-width: 410px) {
+    .playpause-button:before {
+        border-width: 0.3em 0 0.3em 0.6em;
+        top: 0.25em;
+        left: 0.3em;
+    }
+    .playpause-button.paused:before {
+        height: 0.6em;
+        border-width: 0 0 0 0.6em;
+        left: 0.24em;
+    }
+    /* the button's mouseover/click/hover layer: size, shape, appearance */
+    .playpause-button:after {
+        top: 0.1em;
+        left: 0.44em;
+        transition: .218s ease;
+    }
+    .playpause-button.paused:after {
+        width: .2em;
+    }
+}
+
+@media(max-width: 355px) {
+    .playpause-button:before {
+        border-width: 0.2em 0 0.2em 0.4em;
+        top: 0.2em;
+        left: 0.3em;
+    }
+    .playpause-button.paused:before {
+        height: 0.43em;
+        border-width: 0 0 0 0.4em;
+        left: 0.24em;
+    }
+    /* the button's mouseover/click/hover layer: size, shape, appearance */
+    .playpause-button:after {
+        top: 0.1em;
+        left: 0.37em;
+        transition: .218s ease;
+    }
+    .playpause-button.paused:after {
+        width: .125em;
+        height: .75em;
+    }
+}
