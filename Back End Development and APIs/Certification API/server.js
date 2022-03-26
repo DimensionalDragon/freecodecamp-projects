@@ -2,9 +2,16 @@ const express = require('express');
 const app = express();
 
 const port = process.env.PORT || 3000;
+const {DB_URI} = process.env;
 
 const cors = require('cors');
 app.use(cors({optionsSuccessStatus: 200}));
+
+const mongoose = require('mongoose');
+mongoose.connect(DB_URI);
+const db = mongoose.connection;
+db.on('error', (err) => console.error('[Error]', err));
+db.once('open', () => console.log('Connected to database'));
 
 app.use(express.static('public'));
 
@@ -25,5 +32,12 @@ app.get('/header-parser', (req, res) => {
 })
 const headerParserRouter = require('./routes/headerParser.js');
 app.use('/header-parser', headerParserRouter);
+
+// URL Shortener Microservice
+app.get('/url-shortener', (req, res) => {
+    res.sendFile(__dirname + '/views/url-shortener.html');
+})
+const urlShortenerRouter = require('./routes/urlShortener.js');
+app.use('/url-shortener', urlShortenerRouter);
 
 app.listen(port, () => console.log(`Server Started on port ${port}`))
