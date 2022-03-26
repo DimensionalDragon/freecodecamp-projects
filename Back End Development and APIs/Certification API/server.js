@@ -19,5 +19,11 @@ app.get('/timestamp', (req, res) => {
 const timestampRouter = require('./routes/timestamp.js');
 app.use('/timestamp', timestampRouter);
 
+// Request Header Parser Microservice
+app.get('/header-parser', (req, res) => {
+    res.sendFile(__dirname + '/views/header-parser.html');
+})
+const headerParserRouter = require('./routes/headerParser.js');
+app.use('/header-parser', headerParserRouter);
 
 app.listen(port, () => console.log(`Server Started on port ${port}`))

@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.sendFile(__dirname + '/../views/timestamp.html');
-});
-
 router.get('/api', (req, res) => {
     const date = new Date();
     res.json({unix: date.getTime(), utc: date.toUTCString()});
