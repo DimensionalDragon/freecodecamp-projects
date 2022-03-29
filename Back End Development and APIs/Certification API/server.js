@@ -40,4 +40,11 @@ app.get('/url-shortener', (req, res) => {
 const urlShortenerRouter = require('./routes/urlShortener.js');
 app.use('/url-shortener', urlShortenerRouter);
 
+// Exercise Tracker Microservice
+app.get('/exercise-tracker', (req, res) => {
+    res.sendFile(__dirname + '/views/exercise-tracker.html');
+})
+const exerciseTrackerRouter = require('./routes/exerciseTracker.js');
+app.use('/exercise-tracker', exerciseTrackerRouter);
+
 app.listen(port, () => console.log(`Server Started on port ${port}`))
