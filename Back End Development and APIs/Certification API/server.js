@@ -47,4 +47,11 @@ app.get('/exercise-tracker', (req, res) => {
 const exerciseTrackerRouter = require('./routes/exerciseTracker.js');
 app.use('/exercise-tracker', exerciseTrackerRouter);
 
+// File Metadata Microservice
+app.get('/file-metadata', (req, res) => {
+    res.sendFile(__dirname + '/views/file-metadata.html');
+})
+const fileMetadataRouter = require('./routes/fileMetadata.js');
+app.use('/file-metadata', fileMetadataRouter);
+
 app.listen(port, () => console.log(`Server Started on port ${port}`))
