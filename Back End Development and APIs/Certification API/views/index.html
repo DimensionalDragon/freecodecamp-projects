@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DimensionalDragon freeCodeCamp API Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section class="title">
+        <h1 class="hidden">DimensionalDragon Microservices</h1>
+    </section>
+    <section class="links">
+        <p class="hidden">Welcome! Feel free to use these services</p>
+        <br>
+        <ul>
+            <li>
+                <a href="/timestamp" class="link">
+                    <div class="hidden">
+                        <i class="fa-solid fa-clock"></i>
+                        <p class="link-text">Timestamp</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/header-parser" class="link">
+                    <div class="hidden">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <p class="link-text">Header Parser</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/url-shortener" class="link">
+                    <div class="hidden">
+                        <i class="fa-solid fa-globe"></i>
+                        <p class="link-text">URL Shortener</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/exercise-tracker" class="link">
+                    <div class="hidden">
+                        <i class="fa-solid fa-person-walking"></i>
+                        <p class="link-text">Exercise Tracker</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/file-metadata" class="link">
+                    <div class="hidden">
+                        <i class="fa-solid fa-file"></i>
+                        <p class="link-text">File Metadata</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+<script>
+    const title = document.querySelector('.title h1');
+    const linkText = document.querySelector('.links p');
+    const links = document.querySelectorAll('.link div');
+    setTimeout(() => title.className = 'show', 100);
+    setTimeout(() => linkText.className = 'show', 250);
+    setTimeout(() => links.forEach(link => link.className = 'show'), 500);
+    links.forEach(link => link.addEventListener('mouseover', () => {
+        link.children[0].classList.add('fa-fade');
+        link.children[1].classList.add('underline');
+    }));
+    links.forEach(link => link.addEventListener('mouseout', () => {
+            link.children[0].classList.remove('fa-fade');
+            link.children[1].classList.remove('underline');
+        }));
+</script>
+</html>
